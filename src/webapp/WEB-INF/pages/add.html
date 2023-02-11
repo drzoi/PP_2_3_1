@@ -12,19 +12,16 @@
                 <label for="name">Name:</label>
                 <br/>
                 <input type="text" th:field="*{name}" id="name" required/>
-                <div class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
             </div>
             <div>
                 <label for="surname">Surname:</label>
                 <br/>
                 <input type="text" th:field="*{surname}" id="surname" required/>
-                <div class="error" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></div>
             </div>
             <div>
                 <label for="age">Age:</label>
                 <br/>
                 <input type="text" th:field="*{age}" id="age" required/>
-                <div class="error" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></div>
             </div>
             <input type="submit" value="create"/>
         </form>
