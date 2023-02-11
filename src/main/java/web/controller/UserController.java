@@ -4,10 +4,8 @@ import web.model.User;
 import web.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -43,7 +41,7 @@ public class UserController {
     }
 
     @PatchMapping("/user_{id}")
-    public String update(@ModelAttribute("user") User user, BindingResult bindingResult) {
+    public String update(@ModelAttribute("user") User user) {
         userService.updateUser(user);
         return "redirect:/";
     }
